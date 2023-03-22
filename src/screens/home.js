@@ -1,29 +1,49 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { Image} from "react-native";
+import {Image} from 'react-native';
 import React from 'react';
 import styled from 'styled-components';
 
 const Home = props => {
   console.log('🚀 ~ file: home.js:6 ~ Home ~ props:', props);
 
-  const handleNavigation = page => {
-    props.navigation.navigate(page);
+  const handleNavigation = (page, query) => {
+    console.log(page, query);
+    props.navigation.navigate(page, query);
   };
 
   return (
     <Container>
       <TitleContainer>
-        <StyledImage source={{ uri: 'https://cdn-icons-png.flaticon.com/512/1177/1177379.png' }}/>
+        <StyledImage
+          source={{
+            uri: 'https://cdn-icons-png.flaticon.com/512/1177/1177379.png',
+          }}
+        />
         <TextOutline>Pokédex de Rymu</TextOutline>
-      </TitleContainer> 
-      <StyledButton onPress={() => handleNavigation('Kanto')}>
+      </TitleContainer>
+      <StyledButton onPress={() => handleNavigation('Pokedex', 'kanto')}>
         <StyledButtonText>Kanto</StyledButtonText>
       </StyledButton>
-      <StyledButton onPress={() => handleNavigation('Johto')}>
+      <StyledButton onPress={() => handleNavigation('Pokedex', 'johto')}>
         <StyledButtonText>Johto</StyledButtonText>
       </StyledButton>
-      <StyledButton onPress={() => handleNavigation('Sinnoh')}>
+      <StyledButton onPress={() => handleNavigation('Pokedex', 'hoenn')}>
+        <StyledButtonText>Hoenn</StyledButtonText>
+      </StyledButton>
+      <StyledButton onPress={() => handleNavigation('Pokedex', 'sinnoh')}>
         <StyledButtonText>Sinnoh</StyledButtonText>
+      </StyledButton>
+      <StyledButton onPress={() => handleNavigation('Pokedex', 'unys')}>
+        <StyledButtonText>Unys</StyledButtonText>
+      </StyledButton>
+      <StyledButton onPress={() => handleNavigation('Pokedex', 'kalos')}>
+        <StyledButtonText>Kalos</StyledButtonText>
+      </StyledButton>
+      <StyledButton onPress={() => handleNavigation('Pokedex', 'alola')}>
+        <StyledButtonText>Alola</StyledButtonText>
+      </StyledButton>
+      <StyledButton onPress={() => handleNavigation('Pokedex', 'galar')}>
+        <StyledButtonText>Galar</StyledButtonText>
       </StyledButton>
     </Container>
   );

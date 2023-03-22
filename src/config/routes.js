@@ -1,10 +1,12 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import * as React from 'react';
 import styled from 'styled-components';
 import Home from '../screens/home';
-import Sinnoh from '../screens/sinnoh';
-import Johto from '../screens/johto';
+import Details from '../screens/details';
+import Pokedex from '../screens/pokedex';
+
+
 
 const Stack = createNativeStackNavigator();
 
@@ -17,9 +19,8 @@ const Routes = () => {
             headerShown: false,
           }}>
           <Stack.Screen name="Home" component={Home} />
-          <Stack.Screen name="Johto" component={Johto} />
-          <Stack.Screen name="Sinnoh" component={Sinnoh} />
-          
+          <Stack.Screen name="Pokedex" component={Pokedex} />
+          <Stack.Screen name="Details" component={Details} />
         </Stack.Navigator>
       </NavigationContainer>
     </GlobalSafeArea>
