@@ -53,14 +53,6 @@ const Details = ({route}) => {
           })}
           <Value>{pokemon.type}</Value>
         </Row>
-        <Row>
-          <Label>Taille</Label>
-          <Value>{pokemon.height} m</Value>
-        </Row>
-        <Row>
-          <Label>Poids</Label>
-          <Value>{pokemon.weight} kg</Value>
-        </Row>
       </Info>
     </Container>
   );
