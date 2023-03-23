@@ -6,3 +6,4 @@ Fonctionnalités :
 - Barre de recherche
 - Filtres par types
 
+Le gif est dans la racine du projet sous le nom : "vyfqdQc.gif".
